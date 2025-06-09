@@ -1,8 +1,7 @@
 package main
 
 import (
-	"fmt"
-	"strings"
+	"playground/utils"
 )
 
 func main() {
@@ -17,19 +16,7 @@ func main() {
 		"Nicholas Runolfsdottir V", 
 		"Glena Reichert", 
 		"Clementina DuBuque"}
-	searchPerson(users, "Gle")
-	searchPerson(users, "Cle")
-	searchPerson(users, "asd")
-}
-
-func searchPerson(data []string, query string) {
-	found := false
-	for _, person := range data {
-		if strings.Contains(strings.ToLower(person), strings.ToLower(query)) {
-			fmt.Println(person)
-			found = true
-		}}
-		if !found {
-			fmt.Println("Users not found")
-	}
+	utils.SearchPerson(users, "Gle")
+	utils.SearchPerson(users, "Cle")
+	utils.SearchPerson(users, "asd")
 }
