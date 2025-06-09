@@ -17,13 +17,16 @@ func main() {
 		"Nicholas Runolfsdottir V", 
 		"Glena Reichert", 
 		"Clementina DuBuque"}
-	searchPerson(users, "clemen")
+	searchPerson(users, "asd")
 }
 
-func searchPerson(users []string, query string) {
-	for _, person := range users {
+func searchPerson(data []string, query string) {
+	for _, person := range data {
 		if strings.Contains(strings.ToLower(person), strings.ToLower(query)) {
 			fmt.Println(person)
+		} else {
+			fmt.Println("Users not found")
+			break
 		}
 	}
 }
